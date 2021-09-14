@@ -2,9 +2,15 @@ const Discord = require('discord.js');
 const bot = new Discord.Client({
 	partials: ['MESSAGE', 'CHANNEL', 'REACTION']
 });
-const config = require('./settings.json');
+//const config = require('./settings.json');
 const { loadCommands } = require('./utils/loadCommands');
 const DisTube = require('distube')
+
+require('dotenv-flow').config();
+const config = {
+    token: process.env.TOKEN
+}
+
 
 bot.distube = new DisTube(bot, { searchSongs: false, emitNewSongOnly: true });
 bot.distube
