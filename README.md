@@ -3,7 +3,7 @@
 
 Hi, this is a generic music bot for personal use.
 
-Dependacies:
+Dependencies:
 * discord.js v12 (cant be 13) - npm i discord.js@12.4.1
 * FFmpeg - npm install ffmpeg-static
 * @discordjs/opus - npm install @discordjs/opus
