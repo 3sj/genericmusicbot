@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     if(queue) {
         bot.distube.stop(message)
 
-        message.channel.send('DONE!')
+        message.channel.send(':stop_button: **Song stoped - I have disconnected, goodbye!**')
     } else if (!queue) {
         return
     };
