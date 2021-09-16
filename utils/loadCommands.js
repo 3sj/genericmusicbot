@@ -12,6 +12,7 @@ function loadCommands(bot) {
     
         jsfile.forEach((f, i) => {
             const pull = require(`../commands/${f}`);
+            console.log(`✅Loaded: ${f}`)
             bot.commands.set(pull.config.name, pull);
             pull.config.aliases.forEach(alias => {
                 bot.aliases.set(alias, pull.config.name);
