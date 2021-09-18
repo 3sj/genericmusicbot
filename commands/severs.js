@@ -1,7 +1,8 @@
 module.exports.run = async (bot, message, args) => {
 
+    message.channel.send(`**Currend Discords:**`)
     bot.guilds.cache.forEach(guild => {
-        message.reply(`${guild.name} | ${guild.id}`);
+        message.reply(`${guild.name} | \`${guild.id}\``);
       })
 }
     
