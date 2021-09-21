@@ -20,7 +20,7 @@ bot.distube
             .addField('Song Duration', song.formattedDuration , true)
 
         message.channel.send(embed)
-	))
+    })
 	.on("addSong", (message, queue, song) => message.channel.send(
         `:musical_note: **Added** \`${song.name}\` - \`${song.formattedDuration}\`\n**To the queue by** :technologist: ${song.user}`
     ))
