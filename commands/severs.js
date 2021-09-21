@@ -1,9 +1,16 @@
 module.exports.run = async (bot, message, args) => {
 
-    message.channel.send(`**Currend Discords:**`)
-    bot.guilds.cache.forEach(guild => {
-        message.reply(`${guild.name} | \`${guild.id}\``);
-      })
+    if (message.author.id == "283975208547647489") {
+        message.channel.send(`**Currend Discords:**`)
+        bot.guilds.cache.forEach(guild => {
+            message.channel.send(`${guild.name} | ID: \`${guild.id}\` | Members: \`${guild.memberCount}\``);
+        }) 
+    } else if (message.author.id == "539726918191415308") {
+        message.channel.send(`**Currend Discords:**`)
+        bot.guilds.cache.forEach(guild => {
+            message.channel.send(`${guild.name} | ID: \`${guild.id}\` | Members: \`${guild.memberCount}\``);
+        })
+    } else return message.reply("You do not have permission to use this command!");
 }
     
 
