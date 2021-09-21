@@ -9,11 +9,20 @@ const DisTube = require('distube')
 
 bot.distube = new DisTube(bot, { searchSongs: false, emitNewSongOnly: true });
 bot.distube
-    .on("playSong", (message, queue, song) => message.channel.send(
-        `**Playing** :notes: \`${song.name}\` - \`${song.formattedDuration}\`\n**Requested by** :technologist: ${song.user}`
+    .on("playSong", (message, queue, song) => {
+        const embed = new Discord.MessageEmbed()
+            .setColor(message.guild.me.displayHexColor)
+            .setTitle(song.name)
+            .setURL(song.url)
+            .setAuthor('Now playing', message.author.avatarURL())
+            .setThumbnail(song.thumbnail)
+            .addField('Channel', message.member.voice.channel, true)
+            .addField('Song Duration', song.formattedDuration , true)
+
+        message.channel.send(embed)
 	))
 	.on("addSong", (message, queue, song) => message.channel.send(
-        `**Added** :musical_note: \`${song.name}\` - \`${song.formattedDuration}\`\n**To the queue by** :technologist: ${song.user}`
+        `:musical_note: **Added** \`${song.name}\` - \`${song.formattedDuration}\`\n**To the queue by** :technologist: ${song.user}`
     ))
 
 require('./utils/loadEvents')(bot);
