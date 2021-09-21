@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     if(queue) {
         bot.distube.skip(message)
 
-        message.channel.send(':fast_forward: **Song skipped**')
+        message.react('⏩')
     } else if (!queue) {
         return
     };
