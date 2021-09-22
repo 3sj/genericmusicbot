@@ -11,10 +11,13 @@ bot.distube = new DisTube(bot, { searchSongs: false, emitNewSongOnly: true, leav
 bot.distube
     .on("playSong", (message, queue, song) => message.channel.send(
 	`**Playing** :notes: \`${song.name}\` - \`${song.formattedDuration}\`\n**Requested by** :technologist: ${song.user}`
-	))
+    ))
 	.on("addSong", (message, queue, song) => message.channel.send(
         `:musical_note: **Added** \`${song.name}\` - \`${song.formattedDuration}\`\n**To the queue by** :technologist: ${song.user}`
     ))
+    .on("initQueue", queue => {
+        queue.autoplay = false;
+    })
 
 require('./utils/loadEvents')(bot);
 
