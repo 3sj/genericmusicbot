@@ -10,6 +10,8 @@ Include config.json in Data folder:
         }
 
 dependencies needed:
+	node.js v16.1+ is needed
+
 	npm i @discordjs/opus
         Version: ^0.6.0
 
