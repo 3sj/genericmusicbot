@@ -1,13 +1,29 @@
-# This is a generic music bot
+Welcome to the GenericMusicBot!
 
+node . to start de bot
 
-Hi, this is a generic music bot for personal use.
+Include config.json in Data folder:
+        Contents of config.json currently required:
+        {
+	"token": "TOKEN",
+	"prefix": "PREFIX"
+        }
 
-Dependencies:
-* discord.js v12 (cant be 13) - npm i discord.js@12.4.1
-* FFmpeg - npm install ffmpeg-static
-* @discordjs/opus - npm install @discordjs/opus
-* distube - npm install distube
+dependencies needed:
+	npm i @discordjs/opus
+        Version: ^0.6.0
 
+	npm i @discordjs/voice 
+        Version: ^0.6.0
 
-To run the bot run this command in the console - npm run dev (auto reboots the bot after every change/save)
+	npm i discord.js 
+        Version: ^13.0.1
+
+	npm i distube
+        Version: ^3.0.0-beta.39
+
+	npm i ffmpeg-static
+        Version: ^4.4.0
+        
+	npm i libsodium-wrappers
+        Version: ^0.7.9
