@@ -21,7 +21,7 @@ dependencies needed:
 	npm i discord.js 
         Version: ^13.0.1
 
-	npm i distube
+	npm i distube@beta
         Version: ^3.0.0-beta.39
 
 	npm i ffmpeg-static
