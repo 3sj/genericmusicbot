@@ -11,7 +11,7 @@
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
     "discord.js12": "npm:discord.js@^12.4.1",
-    "distube": "^2.8.18",
+    "distube": "^4.0.4",
     "ffmpeg-static": "^4.4.0"
   }
 }
